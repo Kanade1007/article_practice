@@ -1,0 +1,15 @@
+<h1><%= @article.title %></h1>
+
+<div class="width-90">
+  <p><%= simple_format(@article.content) %></p>
+</div>
+
+<div>
+  <%= link_to "編集", edit_article_path(@article) %>
+  |
+  <%= link_to "一覧に戻る", articles_path %>
+</div>
+
+<div>
+  <%= button_to "削除", article_path(@article), method: :delete %>
+</div>
